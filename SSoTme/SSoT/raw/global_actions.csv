@@ -1,0 +1,2 @@
+id,game_id,name,type,condition,action
+1,1,all_mines_found,all_mines_found,filter(mine).inState(hidden | question).empty(),end-game("You've found all the mines!")

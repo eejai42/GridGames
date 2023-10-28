@@ -1,0 +1,4 @@
+id,game_id,name,width,height,init_id
+1,1,easy,10,10,1
+2,1,medium,20,20,1
+3,1,hard,30,30,1

@@ -1,0 +1,38 @@
+{
+  "ShowHidden": false,
+  "ShowAllFiles": false,
+  "SaveDisabled": false,
+  "SSoTmeProjectId": "2f97b7ca-363e-48b1-a8e3-1f531c8d4ca5",
+  "Name": "SSoTme",
+  "ProjectSettings": [
+    {
+      "ProjectSettingId": "ab0da83c-e1a3-465c-b2f5-3a6745c594fc",
+      "Name": "project-name",
+      "Value": "SSoTme"
+    }
+  ],
+  "ProjectTranspilers": [
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "b57bcecf-ae78-40f0-b475-95447d7f61a1",
+        "Name": "JsonToXml",
+        "Description": "Converts a json blob (or file) into Xml"
+      },
+      "ProjectTranspilerId": "49457ac0-98ba-425c-82a6-ffd0f1837115",
+      "Name": "JsonToXml",
+      "RelativePath": "/SSoT",
+      "CommandLine": "json-to-xml -i ..\\minesweeper.json"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+        "Name": "XmlXsltTransform",
+        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset."
+      },
+      "ProjectTranspilerId": "2855d5c6-3df4-44c7-adee-d96bb3812a80",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/SSoT/raw",
+      "CommandLine": "xml-xslt-transform -i ..\\..\\minesweeper.json.xml -i CreateXlsx.xslt"
+    }
+  ]
+}

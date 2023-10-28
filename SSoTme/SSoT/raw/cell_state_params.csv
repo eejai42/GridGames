@@ -1,0 +1,3 @@
+cell_state_id,type,name
+1,String,discoveredLabel
+1,Behaviour,discoveredBehaviour

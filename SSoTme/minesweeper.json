@@ -1,0 +1,143 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Minesweeper"
+    }
+  ],
+  "fields": [
+    {
+      "id": 1,
+      "game_id": 1,
+      "name": "easy",
+      "width": 10,
+      "height": 10,
+      "init_id": 1
+    },
+    {
+      "id": 2,
+      "game_id": 1,
+      "name": "medium",
+      "width": 20,
+      "height": 20,
+      "init_id": 1
+    },
+    {
+      "id": 3,
+      "game_id": 1,
+      "name": "hard",
+      "width": 30,
+      "height": 30,
+      "init_id": 1
+    }
+  ],
+  "cells": [
+    {
+      "id": 1,
+      "field_id": 1,
+      "name": "_empty",
+      "state_id": 1
+    },
+    {
+      "id": 2,
+      "field_id": 1,
+      "name": "borderingMine",
+      "state_id": 2
+    },
+    {
+      "id": 3,
+      "field_id": 1,
+      "name": "mine",
+      "state_id": 3
+    },
+    {
+      "id": 4,
+      "field_id": 2,
+      "name": "_empty",
+      "state_id": 1
+    },
+    {
+      "id": 5,
+      "field_id": 2,
+      "name": "borderingMine",
+      "state_id": 2
+    },
+    {
+      "id": 6,
+      "field_id": 2,
+      "name": "mine",
+      "state_id": 3
+    },
+    {
+      "id": 7,
+      "field_id": 3,
+      "name": "_empty",
+      "state_id": 1
+    },
+    {
+      "id": 8,
+      "field_id": 3,
+      "name": "borderingMine",
+      "state_id": 2
+    },
+    {
+      "id": 9,
+      "field_id": 3,
+      "name": "mine",
+      "state_id": 3
+    }
+  ],
+  "cell_states": [
+    {
+      "id": 3,
+      "name": "mine",
+      "display_id": 6,
+      "onEnter_id": 2
+    }
+  ],
+  "global_cell_states": [
+    {
+      "id": 1,
+      "game_id": 1,
+      "name": "mineStates",
+      "start_id": 1
+    }
+  ],
+  "cell_state_params":[
+    {
+      "cell_state_id": 1,
+      "type": "String",
+      "name": "discoveredLabel"
+    },
+    {
+      "cell_state_id": 1,
+      "type": "Behaviour",
+      "name": "discoveredBehaviour"
+    }
+  ],
+  "global_actions": [
+    {
+      "id": 1,
+      "game_id": 1,
+      "name": "all_mines_found",
+      "type": "all_mines_found",
+      "condition": "filter(mine).inState(hidden | question).empty()",
+      "action": "end-game(\"You've found all the mines!\")"
+    }
+  ],
+  "global_field_initialisations": [
+    {
+      "id": 1,
+      "game_id": 1,
+      "name": "fill_field",
+      "num_mines": 10
+    }
+  ],
+    "options": [
+    {
+      "id": 1,
+      "game_id": 1,
+      "name": "allow_restart"
+    }
+  ]
+}
